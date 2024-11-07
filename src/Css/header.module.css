@@ -1,0 +1,32 @@
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 9vh;
+    background-color: white;
+    align-items: center;
+    gap: 78%;
+}
+
+.header img{
+    width: 10vw;
+    height: 66%;
+    padding: 20px;
+}
+
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user img{
+    width: 3vw;
+    height: 6%;
+    cursor: pointer;
+}

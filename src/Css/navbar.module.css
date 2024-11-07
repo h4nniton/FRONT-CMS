@@ -1,0 +1,6 @@
+.navbar {
+    width: 8vw;
+    height: 75vh;
+    border-radius: 8px;
+    background: linear-gradient(267deg, rgba(1, 31, 75, 1) 0%, rgba(3, 57, 108, 1) 100%);
+}
