@@ -1,4 +1,5 @@
 import Login from './Pages/Login.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
 import Usuarios from './Pages/Usuarios.js'

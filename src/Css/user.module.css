@@ -7,4 +7,5 @@
 .config {
     display: flex;
     flex-direction: row;
+    gap: 120px;
 }
