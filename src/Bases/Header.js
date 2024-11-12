@@ -7,8 +7,7 @@ function Header() {
     const navigate = useNavigate();
 
     return (
-        <div>
-            <div className={styles.header}></div>
+        <div className={styles.tela}>
             <img src={image} onClick={() => navigate('')}></img>
 
             <div className={styles.pesquisar}>
