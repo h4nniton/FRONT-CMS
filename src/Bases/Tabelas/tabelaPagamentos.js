@@ -1,8 +1,8 @@
-import style from '../../Css/tabelaUsuario.module.css'
+import style from '../../Css/tabelaPagamentos.module.css'
 import { Table } from 'react-bootstrap';
-import Filtro from '../Filtro';
+import Filtro2 from '../Filtro2.js';
 
-function tabelaUsuario() {
+function tabelaPagamento() {
   return (
 
     <div className={style.tabela}>
@@ -11,8 +11,9 @@ function tabelaUsuario() {
           <tr>
             <th>Nome</th>
             <th>E-mail</th>
-            <th>CPF</th>
-            <th>Feito</th>
+            <th>Valor</th>
+            <th>Situação</th>
+            <th>Aprovada</th>
             <th>Perfil</th>
           </tr>
         </thead>
@@ -20,128 +21,143 @@ function tabelaUsuario() {
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
           <tr>
             <td>Jessica Pereira</td>
             <td>jessica@gmail.com</td>
-            <td>64257104031</td>
+            <td>R$250,00</td>
+            <td>Realizado</td>
             <td>Sim</td>
-            <td>Cliente</td>
+            <td>Freelancer</td>
           </tr>
 
         </tbody>
       </Table>
-      <Filtro/>
+      <Filtro2/>
     </div>
   );
 }
 
-export default tabelaUsuario;
+export default tabelaPagamento;

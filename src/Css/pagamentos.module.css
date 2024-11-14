@@ -1,0 +1,11 @@
+.tela{
+    display:flex ;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.config {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+}

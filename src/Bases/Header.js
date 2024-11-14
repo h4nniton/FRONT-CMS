@@ -8,7 +8,7 @@ function Header() {
 
     return (
         <div className={styles.tela}>
-            <img src={image} onClick={() => navigate('')}></img>
+            <img className={styles.logo} src={image} onClick={() => navigate('')}></img>
 
             <div className={styles.pesquisar}>
                 <input className={styles.input} type='search' id='pesquisa' placeholder='Pesquisar'></input>
@@ -16,7 +16,7 @@ function Header() {
 
             <div className={styles.user}>
                 <p  onClick={() => navigate('/PerfilAdministrador')}>Nome usuario</p>
-                <img src={img}  onClick={() => navigate('/PerfilAdministrador')} ></img>
+                <img className={styles.usericon} src={img}  onClick={() => navigate('/PerfilAdministrador')} ></img>
             </div>
         </div>
 

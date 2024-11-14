@@ -14,7 +14,7 @@
     display: flex;
     justify-self: center;
     align-items: center;
-    gap: 8px;
+    gap: 18px;
     flex-direction: column;
     cursor: pointer;
 }

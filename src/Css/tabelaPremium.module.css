@@ -1,0 +1,58 @@
+.tabela {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+td {
+    text-align: center;
+}
+
+/* POP UP DOS ARQUIVOS */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0129645d; /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popupContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    width: 80%;
+}
+
+.popupImagem {
+    width: 5vw;
+    height: 10vh;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #012964;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.closeButton:hover {
+    background-color: #012964;
+}
+
+

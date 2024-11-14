@@ -11,7 +11,7 @@ function Navbar() {
     return (
         <div className={styles.navbar}>
             <div className={styles.icones}>
-                <img src={usuario} onClick={() => navigate('')}></img>
+                <img src={usuario} onClick={() => navigate('/Usuarios')}></img>
                 <p>Usuários</p>
                 <img src={pagamento} onClick={() => navigate('/Pagamentos')}></img>
                 <p>Pagamentos</p>

@@ -1,7 +1,7 @@
 import Header from "../Bases/Header"
 import Navbar from "../Bases/Navbar"
 import Styles from "../Css/user.module.css"
-import TabelaUsuario from "../Bases/Tabelas/tabelaUsuarios.js"
+import TabelaPremium from "../Bases/Tabelas/tabelaPremium.js"
 
 function usuarios() {
 
@@ -10,7 +10,7 @@ function usuarios() {
             <Header />
             <div className={Styles.config}>
                 <Navbar/>
-                <TabelaUsuario/>
+                <TabelaPremium/>
             </div>
 
         </div>

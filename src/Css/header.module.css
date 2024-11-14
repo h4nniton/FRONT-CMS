@@ -6,8 +6,8 @@
     padding-top: 20px;
 }
 
-.tela img{
-    width: 5vw;
+.logo{
+    width: 7vw;
     height: 6%;
     padding-left: 40px;
 }
@@ -16,13 +16,13 @@
 .user{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     gap: 10px;
     cursor: pointer;
 }
 
-.user img{
-    width: 3vw;
+.usericon{
+    width: 4vw;
     height: 100%;
     cursor: pointer;
     padding-right: 25px;

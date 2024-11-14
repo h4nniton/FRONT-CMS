@@ -1,21 +1,20 @@
 import Header from "../Bases/Header"
 import Navbar from "../Bases/Navbar"
-import Styles from "../Css/user.module.css"
-import TabelaUsuario from "../Bases/Tabelas/tabelaUsuarios.js"
+import Styles from "../Css/disputas.module.css"
+import TabelaDisputa from "../Bases/Tabelas/tabelaDisputas"
 
-function usuarios() {
+function Disputas() {
 
     return (
         <div className={Styles.tela}>
             <Header />
             <div className={Styles.config}>
-                <Navbar/>
-                <TabelaUsuario/>
+                <Navbar />
+                <TabelaDisputa/>
             </div>
-
         </div>
     )
 
 }
 
-export default usuarios
+export default Disputas;
