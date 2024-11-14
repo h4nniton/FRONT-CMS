@@ -1,0 +1,55 @@
+.tela{
+    display:flex ;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.config {
+    display: flex;
+    flex-direction: row;
+    gap: 295px;
+}
+
+.notificacoes {
+    width: 45vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+}
+
+.notificacoes2{
+    height: 60vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo {
+    width: 22vw;
+    height: 5vh;
+    background-color: #023480d5;
+    text-align: center;
+    color: #ffffff;
+}
+
+.notificacoesInfos {
+    width: 32vw;
+    height: 20vh;
+    background-color: rgb(240, 240, 240);
+}
+
+.notificacoesInfos h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.notificacoesInfos p {
+    text-align: start;
+}

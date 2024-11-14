@@ -6,6 +6,8 @@ import Usuarios from './Pages/Usuarios.js'
 import Pagamentos from './Pages/Pagamentos.js'
 import Disputas from './Pages/Disputas.js'
 import Premium from './Pages/Premium.js'
+import Notificacoes from './Pages/Notificacoes.js'
+import PerfilAdministrador from './Pages/PerfilAdministrador.js'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path='/Pagamentos' element={<Pagamentos/>}></Route>
         <Route path='/Disputas' element={<Disputas/>}></Route>
         <Route path='/Premium' element={<Premium/>}></Route>
+        <Route path='/Notificacao' element={<Notificacoes/>}></Route>
+        <Route path='/Perfil-Administrador' element={<PerfilAdministrador/>}></Route>
       </Routes>
     </Router>
   );

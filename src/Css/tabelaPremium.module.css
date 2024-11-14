@@ -39,6 +39,11 @@ td {
     height: 10vh;
 }
 
+.popupImagem2 {
+    width: 3vw;
+    height: 7vh;
+}
+
 .closeButton {
     position: absolute;
     top: 10px;
@@ -55,4 +60,33 @@ td {
     background-color: #012964;
 }
 
+
+li {
+    font-size: 21px;
+    text-align: left;
+}
+
+.botaoNotificacao {
+    width: 25px;
+    height: 25px;
+}
+
+.botaoEscolha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.escolhas {
+    width: 75px;
+    height: 40px;
+    background-color: #012964;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10%;
+    text-align: center;
+}
 

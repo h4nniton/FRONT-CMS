@@ -29,7 +29,7 @@ const TabelaDisputa = () => {
                         <th>Comentário</th>
                         <th>Arquivo</th>
                         <th>Status</th>
-                        <th>Tipo</th>
+                        <th>Perfil</th>
                     </tr>
                 </thead>
                 <tbody>
