@@ -97,6 +97,7 @@ const Usuarios = () => {
           )}
         </tbody>
       </Table>
+      <Filtro/>
     </div>
   );
 };
