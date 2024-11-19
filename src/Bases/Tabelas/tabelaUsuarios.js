@@ -1,62 +1,104 @@
-import style from '../../Css/tabelaUsuario.module.css'
+import React, { useState, useEffect } from 'react';
+import style from '../../Css/tabelaUsuario.module.css';
 import { Table } from 'react-bootstrap';
 import Filtro from '../Filtro';
 import { getFreelancers, getClientes } from '../../Integração/funcao';
 
-function tabelaClienteFuncional(clientes) {
-  const linha = document.createElement('tr')
-  const nome = document.createElement('td')
-  const email = document.createElement('td')
-  const cnpj = document.createElement('td')
-  const perfil = document.createElement('td')
+const Usuarios = () => {
+  const [clientes, setClientes] = useState([]);
+  const [freelancers, setFreelancers] = useState([]);
+  const [loading, setLoading] = useState(true);  // Estado para controle de carregamento
+  const [error, setError] = useState(null);      // Estado para mensagens de erro
 
-  nome.textContent = clientes.nome_cliente
-  email.textContent = clientes.email_cliente
-  cnpj.textContent = clientes.cnpj_cliente
-  perfil.textContent = "Cliente"
+  useEffect(() => {
+    const fetchClientes = async () => {
+      try {
+        const usuarios = await getClientes();
+        if (usuarios && Array.isArray(usuarios.clientes)) {
+          setClientes(usuarios.clientes);
+        } else {
+          throw new Error("Dados de clientes inválidos.");
+        }
+      } catch (err) {
+        setError("Erro ao carregar clientes.");
+        console.error(err);
+      }
+    };
 
-  linha.append (nome,email,cnpj, perfil)
-  return linha
-}
+    const fetchFreelancers = async () => {
+      try {
+        const usuarios = await getFreelancers();
+        if (usuarios && Array.isArray(usuarios.freelancers)) {
+          setFreelancers(usuarios.freelancers);
+        } else {
+          throw new Error("Dados de freelancers inválidos.");
+        }
+      } catch (err) {
+        setError("Erro ao carregar freelancers.");
+        console.error(err);
+      }
+    };
 
-const linhaUser = document.getElementById("usuarios")
-  const usuarios = await getClientes()
-  usuarios.clientes.forEach(clientes => {
-    const linha = tabelaClienteFuncional(clientes)
-    linhaUser.appendChild(linha)
-  });
+    // Inicia o carregamento dos dados
+    setLoading(true);
+    fetchClientes();
+    fetchFreelancers();
+    setLoading(false);
+  }, []);
 
-// function tabelaFreelasFuncional(freelancer) {
-//   const linha = document.createElement('tr')
-//   const nome = document.createElement('td')
-//   const email = document.createElement('td')
-//   const cpf = document.createElement('td')
-//   const perfil = document.createElement('td')
+  if (loading) {
+    return <div>Carregando...</div>; // Exibe uma mensagem enquanto os dados estão sendo carregados
+  }
 
+  if (error) {
+    return <div>{error}</div>; // Exibe mensagem de erro, se ocorrer
+  }
 
-//   nome.textContent = freelancer.nome_freelancer
-//   email.textContent = freelancer.email_freelancer
-//   cpf.textContent = freelancer.cpf_freelancer
-
-// } 
-
-function tabelaUsuario() {
   return (
-    <div>
-      <Table>
+    <div className={style.tabela} id="usuarios">
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Nome</th>
-            <th>E-mail</th>
-            <th>CPF</th>
+            <th>Email</th>
+            <th>CPF / CNPJ</th>
             <th>Perfil</th>
           </tr>
         </thead>
-        <tbody id='usuarios'></tbody>
+        <tbody>
+          {clientes.length > 0 ? (
+            clientes.map((cliente, index) => (
+              <tr key={index}>
+                <td>{cliente.nome_cliente}</td>
+                <td>{cliente.email_cliente}</td>
+                <td>{cliente.cnpj_cliente}</td>
+                <td>Cliente</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="4">Nenhum cliente encontrado.</td>
+            </tr>
+          )}
+
+          {freelancers.length > 0 ? (
+            freelancers.map((freelancers, index) => (
+              <tr key={index}>
+                <td>{freelancers.nome_freelancer}</td>
+                <td>{freelancers.email_freelancer}</td>
+                <td>{freelancers.cpf_freelancer}</td>
+                <td>Freelancer</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="4">Nenhum freelancer encontrado.</td>
+            </tr>
+          )}
+        </tbody>
       </Table>
     </div>
   );
-}
+};
 
-
-export default tabelaUsuario;
+export default Usuarios;
