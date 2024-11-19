@@ -61,6 +61,7 @@ const Usuarios = () => {
           <tr>
             <th>Nome</th>
             <th>Email</th>
+            <th>Descrição</th>
             <th>CPF / CNPJ</th>
             <th>Perfil</th>
           </tr>
@@ -71,6 +72,7 @@ const Usuarios = () => {
               <tr key={index}>
                 <td>{cliente.nome_cliente}</td>
                 <td>{cliente.email_cliente}</td>
+                <td>{cliente.descricao_cliente}</td>
                 <td>{cliente.cnpj_cliente}</td>
                 <td>Cliente</td>
               </tr>
@@ -86,6 +88,7 @@ const Usuarios = () => {
               <tr key={index}>
                 <td>{freelancers.nome_freelancer}</td>
                 <td>{freelancers.email_freelancer}</td>
+                <td>{freelancers.descricao_freelancer}</td>
                 <td>{freelancers.cpf_freelancer}</td>
                 <td>Freelancer</td>
               </tr>
