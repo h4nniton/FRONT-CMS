@@ -9,6 +9,10 @@ const Usuarios = () => {
   const [freelancers, setFreelancers] = useState([]);
   const [loading, setLoading] = useState(true);  // Estado para controle de carregamento
   const [error, setError] = useState(null);      // Estado para mensagens de erro
+  
+  // Filtros para Freelancer e Cliente
+  const [isFreelancer, setIsFreelancer] = useState(false);
+  const [isCliente, setIsCliente] = useState(false);
 
   useEffect(() => {
     const fetchClientes = async () => {
@@ -46,12 +50,16 @@ const Usuarios = () => {
     setLoading(false);
   }, []);
 
+  // Filtrando os clientes e freelancers com base no estado de filtro
+  const filteredClientes = isCliente ? clientes : [];
+  const filteredFreelancers = isFreelancer ? freelancers : [];
+
   if (loading) {
-    return <div>Carregando...</div>; // Exibe uma mensagem enquanto os dados estão sendo carregados
+    return <div>Carregando...</div>;
   }
 
   if (error) {
-    return <div>{error}</div>; // Exibe mensagem de erro, se ocorrer
+    return <div>{error}</div>;
   }
 
   return (
@@ -67,8 +75,9 @@ const Usuarios = () => {
           </tr>
         </thead>
         <tbody>
-          {clientes.length > 0 ? (
-            clientes.map((cliente, index) => (
+          {/* Exibindo clientes filtrados */}
+          {filteredClientes.length > 0 ? (
+            filteredClientes.map((cliente, index) => (
               <tr key={index}>
                 <td>{cliente.nome_cliente}</td>
                 <td>{cliente.email_cliente}</td>
@@ -79,28 +88,32 @@ const Usuarios = () => {
             ))
           ) : (
             <tr>
-              <td colSpan="4">Nenhum cliente encontrado.</td>
+              <td colSpan="5">Nenhum cliente encontrado.</td>
             </tr>
           )}
 
-          {freelancers.length > 0 ? (
-            freelancers.map((freelancers, index) => (
+          {/* Exibindo freelancers filtrados */}
+          {filteredFreelancers.length > 0 ? (
+            filteredFreelancers.map((freelancer, index) => (
               <tr key={index}>
-                <td>{freelancers.nome_freelancer}</td>
-                <td>{freelancers.email_freelancer}</td>
-                <td>{freelancers.descricao_freelancer}</td>
-                <td>{freelancers.cpf_freelancer}</td>
+                <td>{freelancer.nome_freelancer}</td>
+                <td>{freelancer.email_freelancer}</td>
+                <td>{freelancer.descricao_freelancer}</td>
+                <td>{freelancer.cpf_freelancer}</td>
                 <td>Freelancer</td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="4">Nenhum freelancer encontrado.</td>
+              <td colSpan="5">Nenhum freelancer encontrado.</td>
             </tr>
           )}
         </tbody>
       </Table>
-      <Filtro/>
+      <Filtro
+        setIsFreelancer={setIsFreelancer}
+        setIsCliente={setIsCliente}
+      />
     </div>
   );
 };

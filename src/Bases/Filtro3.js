@@ -86,23 +86,7 @@ function Filtro2 () {
                                 />
                                 Pendente
                             </label>
-                            <label>
-                                <input className={style.caixinha} 
-                                    type="checkbox" 
-                                    checked={checkbox4} 
-                                    onChange={handleCheckbox4Change} 
-                                />
-                               Cliente
-                            </label>
-
-                            <label>
-                                <input className={style.caixinha}
-                                    type="checkbox" 
-                                    checked={checkbox5} 
-                                    onChange={handleCheckbox5Change} 
-                                />
-                                Freelancer
-                            </label>
+                            
                         
                         </div>
                     </div>

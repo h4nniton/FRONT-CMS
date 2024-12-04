@@ -1,18 +1,15 @@
+// Filtro2.js
 import style from '../Css/filtro.module.css'
 import React, { useState } from 'react';
-import image from '../img/filtro.png'
+import image from '../img/filtro.png';
 
-function Filtro2 () {
-
+function Filtro2({ onFilterChange }) {
     // Estado para controlar se o pop-up está aberto ou fechado
     const [isOpen, setIsOpen] = useState(false);
 
     // Estado para controlar o estado das checkboxes
-    const [checkbox1, setCheckbox1] = useState(false);
-    const [checkbox2, setCheckbox2] = useState(false);
-    const [checkbox3, setCheckbox3] = useState(false);
-    const [checkbox4, setCheckbox4] = useState(false);
-    const [checkbox5, setCheckbox5] = useState(false);
+    const [checkbox1, setCheckbox1] = useState(false); // Pendentes
+    const [checkbox2, setCheckbox2] = useState(false); // Realizados
 
     // Função para abrir o pop-up
     const abrirPopUp = () => {
@@ -26,23 +23,15 @@ function Filtro2 () {
 
     // Função para lidar com a mudança de estado das checkboxes
     const handleCheckbox1Change = () => {
-        setCheckbox1(prevState => !prevState);
+        const newValue = !checkbox1;
+        setCheckbox1(newValue);
+        onFilterChange(newValue, checkbox2); // Passa o novo filtro para o pai
     };
 
     const handleCheckbox2Change = () => {
-        setCheckbox2(prevState => !prevState);
-    };
-
-    const handleCheckbox3Change = () => {
-        setCheckbox3(prevState => !prevState);
-    };
-
-    const handleCheckbox4Change = () => {
-        setCheckbox4(prevState => !prevState);
-    };
-
-    const handleCheckbox5Change = () => {
-        setCheckbox5(prevState => !prevState);
+        const newValue = !checkbox2;
+        setCheckbox2(newValue);
+        onFilterChange(checkbox1, newValue); // Passa o novo filtro para o pai
     };
 
     return (
@@ -61,55 +50,30 @@ function Filtro2 () {
 
                         <div className={style.checkboxContainer}>
                             <label>
-                                <input className={style.caixinha}
-                                    type="checkbox" 
-                                    checked={checkbox1} 
-                                    onChange={handleCheckbox1Change} 
+                                <input
+                                    className={style.caixinha}
+                                    type="checkbox"
+                                    checked={checkbox1}
+                                    onChange={handleCheckbox1Change}
                                 />
                                 Pendentes
                             </label>
 
                             <label>
-                                <input className={style.caixinha} 
-                                    type="checkbox" 
-                                    checked={checkbox2} 
-                                    onChange={handleCheckbox2Change} 
+                                <input
+                                    className={style.caixinha}
+                                    type="checkbox"
+                                    checked={checkbox2}
+                                    onChange={handleCheckbox2Change}
                                 />
-                               Realizados
+                                Realizados
                             </label>
-
-                            <label>
-                                <input className={style.caixinha}
-                                    type="checkbox" 
-                                    checked={checkbox3} 
-                                    onChange={handleCheckbox3Change} 
-                                />
-                                Em aberto
-                            </label>
-                            <label>
-                                <input className={style.caixinha} 
-                                    type="checkbox" 
-                                    checked={checkbox4} 
-                                    onChange={handleCheckbox4Change} 
-                                />
-                               Cliente
-                            </label>
-
-                            <label>
-                                <input className={style.caixinha}
-                                    type="checkbox" 
-                                    checked={checkbox5} 
-                                    onChange={handleCheckbox5Change} 
-                                />
-                                Freelancer
-                            </label>
-                        
                         </div>
                     </div>
                 </div>
             )}
         </div>
     );
-};
+}
 
 export default Filtro2;

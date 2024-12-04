@@ -1,11 +1,10 @@
-import Styles from '../Css/notificacoes.module.css'
+import { FaTools } from 'react-icons/fa'; // Ícone de ferramentas (ou qualquer outro ícone)
+import Styles from '../Css/notificacoes.module.css';
 import Header from '../Bases/Header';
 import Navbar from '../Bases/Navbar';
 
 function Notificacoes() {
-
     return (
-
         <div className={Styles.tela}>
             <Header />
             <div className={Styles.config}>
@@ -13,71 +12,17 @@ function Notificacoes() {
 
                 <div className={Styles.notificacoes}>
                     <div className={Styles.titulo}>
-                        <h2>Todas as notificações</h2>
+                        
                     </div>
-                    <div className={Styles.notificacoes2}>
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
-
-                        <div className={Styles.notificacoesInfos}>
-                            <h1>Gustavo Henrique adicionou uma disputa</h1>
-                            <p>há 5 horas</p>
-                        </div>
+                    <div className={Styles.emConstrucao}>
+                        <FaTools size={50} className={Styles.iconConstrucao} />
+                        <h3>Tela de notificação está em construção</h3>
+                        <p>Estamos trabalhando nisso, em breve estará disponível!</p>
                     </div>
                 </div>
-
             </div>
-
         </div>
-    )
-
+    );
 }
 
 export default Notificacoes;

@@ -347,11 +347,6 @@ const TabelaPremium = () => {
                         <button onClick={fecharPopUp} className={style.closeButton}>Fechar</button>
                         <h2>Histórico de pagamento</h2>
                         <img src={conta} alt="Historico de pagamento" className={style.popupImagem} />
-                        <ul>
-                            <li>15/08/24</li>
-                            <li>15/09/24</li>
-                            <li>15/10/24</li>
-                        </ul>
                     </div>
                 </div>
             )}
